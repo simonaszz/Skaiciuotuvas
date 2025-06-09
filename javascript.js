@@ -4,6 +4,7 @@ let action = '+';
 let answer = 0;
 
 let input = document.getElementById('calc-input');
+let calculationSpan = document.getElementById('calculation');
 
 function onNumberClick(number) {
     input.value += number;
@@ -22,6 +23,8 @@ function onCountClick() {
 
     calculateAnswer();
     input.value = answer;
+
+    calculationSpan.innerText = `${firstNumber} ${action} ${secondNumber}`;
 }
 
 

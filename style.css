@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .calculator {
@@ -17,20 +18,37 @@ body {
     max-width: 400px;
     background-color: white;
     padding: 10px;
+    border-radius: 8px;
+}
+
+.calculator .input-row {
+    position: relative;
+}
+
+.calculator .input-row span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.25em 1em;
+    opacity: 0.5
 }
 
 .calculator .input-row input {
     width: 100%;
+    font-size: 2em;
     text-align: right;
-    padding: 1em;
+    padding: 2em 1em 1em  1em;
     background-color: #eeeeee;
     border: 1px solid #b1b1b1;
+    border-radius: 5px;
 
 }
 
 .calculator .buttons {
     display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
+    
 }
 
 .calculator .buttons button {
