@@ -43,3 +43,7 @@ body {
     cursor: pointer;
 }
 
+.calculator .buttons button:hover {
+    background-color: #3876a0;
+    color: white;
+}
