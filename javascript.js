@@ -20,3 +20,12 @@ function onCountClick() {
     action = splitted[1];
     secondNumber = parseInt(splitted[2]);
 }
+
+function calculateAnswer() {
+    switchc(action) {
+    case '+': answer = firstNumber + secondNumber; break;
+    case '-': answer = firstNumber - secondNumber; break;
+    case 'x': answer = firstNumber * secondNumber; break;
+    case '/': answer = firstNumber / secondNumber; break;
+    }
+}
