@@ -6,6 +6,9 @@ let answer = 0;
 let input = document.getElementById('calc-input');
 let calculationSpan = document.getElementById('calculation');
 
+let history = [];
+
+
 function onNumberClick(number) {
     input.value += number;
 }
@@ -25,6 +28,8 @@ function onCountClick() {
     input.value = answer;
 
     calculationSpan.innerText = `${firstNumber} ${action} ${secondNumber}`;
+
+    addToHistory();
 }
 
 
@@ -43,5 +48,16 @@ function onCleanClick() {
     secondNumber = 0;
     action = '+';
     answer = 0;
-    input.value = '';
+    input.value = 0;
+    calculationSpan.innerText = '0';
+}
+
+function addToHistory() {
+    let historyItem = {
+        firstNumber,
+        action,
+        secondNumber,
+        ansver
+    };
+    history.pushState(historyItem)
 }
