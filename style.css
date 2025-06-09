@@ -21,10 +21,25 @@ body {
 
 .calculator .input-row input {
     width: 100%;
-    font-size: 2em;
     text-align: right;
     padding: 1em;
     background-color: #eeeeee;
     border: 1px solid #b1b1b1;
 
 }
+
+.calculator .buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calculator .buttons button {
+    width: 25%;
+    padding: 20px;
+    font-size: 2em;
+    border: none;
+    background-color: #9dd8ff;
+    border: 1px solid #b1b1b1;
+    cursor: pointer;
+}
+
