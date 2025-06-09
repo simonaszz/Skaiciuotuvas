@@ -12,11 +12,11 @@ function onNumberClick(number) {
     let parts = input.value.trim().split(' ');
     let lastPart = parts[parts.length - 1];
 
-  
-    if ((lastPart === '0' || lastPart === '')  && number !== '.') {
-       
+
+    if ((lastPart === '0' || lastPart === '') && number !== '.') {
+
         if (lastPart === '0') {
-         
+
             input.value = input.value.slice(0, -1) + number;
 
             return;
@@ -31,7 +31,12 @@ function onNumberClick(number) {
 
 
 function onActionClick(clickedAction) {
-    if (input.value === '' || input.value.endsWith(' ')) return;
+    if (input.value === '')
+
+        return;
+    if (input.value.endsWith(' ')) {
+        input.value = input.value.slice(0, -3);
+    }
     input.value += ' ' + clickedAction + ' ';
     action = clickedAction;
 }
