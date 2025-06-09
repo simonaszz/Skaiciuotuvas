@@ -57,7 +57,13 @@ function addToHistory() {
         firstNumber,
         action,
         secondNumber,
-        ansver
+        answer
     };
-    history.pushState(historyItem)
+    history.push(historyItem)
+}
+
+document.getElementById('show-history').onclick = function () {
+    let formatted = history.map(x => `<p>${x.firstNumber} ${x.action} ${x.secondNumber} = ${x.answer}</p>`);
+    let historyBlock = document.querySelector('.calculator .history-items');
+    historyBlock.innerHTML = formatted.join('');
 }
