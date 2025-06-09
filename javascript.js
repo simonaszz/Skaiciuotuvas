@@ -19,13 +19,26 @@ function onCountClick() {
     firstNumber = parseInt(splitted[0]);
     action = splitted[1];
     secondNumber = parseInt(splitted[2]);
+
+    calculateAnswer();
+    input.value = answer;
 }
 
+
+
 function calculateAnswer() {
-    switchc(action) {
-    case '+': answer = firstNumber + secondNumber; break;
-    case '-': answer = firstNumber - secondNumber; break;
-    case 'x': answer = firstNumber * secondNumber; break;
-    case '/': answer = firstNumber / secondNumber; break;
+    switch (action) {
+        case '+': answer = firstNumber + secondNumber; break;
+        case '-': answer = firstNumber - secondNumber; break;
+        case 'x': answer = firstNumber * secondNumber; break;
+        case '/': answer = firstNumber / secondNumber; break;
     }
+}
+
+function onCleanClick() {
+    firstNumber = 0;
+    secondNumber = 0;
+    action = '+';
+    answer = 0;
+    input.value = '';
 }
